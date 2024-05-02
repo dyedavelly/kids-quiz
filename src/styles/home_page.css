@@ -39,8 +39,7 @@ body {
     margin-top: 150px;
 }
 #mainTitle {
-   text-transform: uppercase;
-   font-family: fantasy;
+   font-family: "fantasy";
    font-size: 40px;
    margin-top: 50px;
    color: darkgreen;
@@ -68,4 +67,15 @@ body {
 }
 #mainMenu button:hover {
     background-color: yellowgreen;
+}
+
+.volumeButtons {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 15px;
+    
+}
+.volumeButtons button {
+    background-color: lavenderblush;
+    color: purple;
 }
