@@ -1,7 +1,3 @@
-@import '/src/styles/reset.css';
-body {
-    background-image: url('/src/assests/background_image.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
+@import '/src/styles/reset.scss';
+@import '/src/styles/home_page.css';
+
