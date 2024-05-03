@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: flex-end;
     padding-right: 30%;
-    margin-top: 50px;   
+    margin-top: 50px;  
 }
 
 .contactLinks a {
@@ -21,11 +21,6 @@ body {
     height: 60px;
     text-align: center;
     color: purple;
-}
-
-.contactLinks a:hover {
-   background-color: lavenderblush;
-   border-radius: 10px;
 }
 
 .centerContainer {
@@ -37,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 15px;
     justify-content: space-around;
     margin-top: 150px;
 }
@@ -82,6 +77,51 @@ body {
     background-color: lavenderblush;
     color: purple;
 }
+
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/about_modal.css ***!
+  \**********************************************************************************************************/
+.aboutModal {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: lavenderblush;
+    width: 500px;
+    height: 300px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column; 
+}
+.aboutModal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.aboutModal .modalTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: darkgreen;
+}
+.aboutModal .closeButton {
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: none;
+    margin-left: auto;
+    margin-right: 15px;
+    padding-top: 10px;
+    color: darkgreen;
+}
+.aboutModal .modalBody {
+    padding: 10px 15px;
+    line-height: 1.5;
+}
+
+
 
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

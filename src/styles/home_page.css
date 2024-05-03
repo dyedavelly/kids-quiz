@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: flex-end;
     padding-right: 30%;
-    margin-top: 50px;   
+    margin-top: 50px;  
 }
 
 .contactLinks a {
@@ -18,11 +18,6 @@ body {
     height: 60px;
     text-align: center;
     color: purple;
-}
-
-.contactLinks a:hover {
-   background-color: lavenderblush;
-   border-radius: 10px;
 }
 
 .centerContainer {
@@ -34,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 15px;
     justify-content: space-around;
     margin-top: 150px;
 }

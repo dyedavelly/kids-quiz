@@ -1,0 +1,41 @@
+.aboutModal {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: lavenderblush;
+    width: 500px;
+    height: 300px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column; 
+}
+.aboutModal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.aboutModal .modalTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: darkgreen;
+}
+.aboutModal .closeButton {
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: none;
+    margin-left: auto;
+    margin-right: 15px;
+    padding-top: 10px;
+    color: darkgreen;
+}
+.aboutModal .modalBody {
+    padding: 10px 15px;
+    line-height: 1.5;
+}
+
+
