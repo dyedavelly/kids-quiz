@@ -27,10 +27,6 @@
         <button id="startButton">Start Quiz</button>
         <button id="aboutButton">About</button>
       </div>
-      <div class="volumeButtons">
-        <button><i class="fa fa-volume-up fa-2x"></i></button>
-        <button hidden="true"><i class="fa fa-volume-off fa-2x"></i></button>
-      </div>
     </div>
     <div class="aboutModal" id="aboutModal">
       <button id="closeButton" class="closeButton">&times;</button>
@@ -43,7 +39,25 @@
         At the end of the quiz, your score will be revealed.
         Join us and let the learning adventure begin! Start the quiz now!
       </div>
+      </div>
       <div id="overlay"></div> <!--yet to be implemented-->
+      <div class="quizModal" id="quizModal">
+          <div class="question">
+            <div id="questionText">what is the color of the sky?</div>
+            <div>
+              <button id="option1">Pink</button>
+              <button id="option2">Orange</button>
+              <button id="option3">Blue</button>
+              <button id="option4">Yellow</button>
+            </div>
+            <div>
+              <button id="nextQuestion">Next</button>
+            </div>
+          </div>
+        <div class="volumeButtons">
+          <button><i class="fa fa-volume-up fa-2x"></i></button>
+          <button hidden="true"><i class="fa fa-volume-off fa-2x"></i></button>
+        </div>
+      </div>
   </body>
-
 </html>

@@ -64,13 +64,3 @@ body {
     background-color: yellowgreen;
 }
 
-.volumeButtons {
-    display: flex;
-    align-self: flex-end;
-    margin-right: 15px;
-    
-}
-.volumeButtons button {
-    background-color: lavenderblush;
-    color: purple;
-}
