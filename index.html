@@ -43,16 +43,21 @@
       <div id="overlay"></div> <!--yet to be implemented-->
       <div class="quizModal" id="quizModal">
           <div class="question">
-            <div id="questionText"></div>
-            <div>
-              <button id="option1"></button>
-              <button id="option2"></button>
-              <button id="option3"></button>
-              <button id="option4"></button>
-            </div>
-            <div>
-              <button id="nextQuestion">Next</button>
-            </div>
+              <div id="questionText"></div>
+              <div class="optionButtons">
+                <div class="buttonLine">
+                  <button id="option1"></button>
+                  <button id="option2"></button>
+                </div>
+                <div class="buttonLine">
+                  <button id="option3"></button>
+                  <button id="option4"></button>
+                </div>
+              </div>
+          </div>
+          <div class="nextAndSubmit">
+            <button id="nextQuestion">Next</button>
+            <button hidden="true" id="submitQuiz">Submit</button>
           </div>
         <div class="volumeButtons">
           <button><i class="fa fa-volume-up fa-2x"></i></button>

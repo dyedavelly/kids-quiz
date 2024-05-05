@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     answer2.innerText = questions[randomQuestionNumber].option2;
     answer3.innerText = questions[randomQuestionNumber].option3;
     answer4.innerText = questions[randomQuestionNumber].option4;
+    const submitButton = document.getElementById('submitQuiz');
 
     const nextButton = document.getElementById('nextQuestion');
     nextButton.addEventListener('click', () => {
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         if (previousQuestionNumbers.length === totalQuestionsInQuiz) {
             previousQuestionNumbers = [];
             nextButton.style.display = 'none';
+            submitButton.style.display = 'block';
         }
 
         questionText.innerText = questions[randomQuestionNumber].text;
