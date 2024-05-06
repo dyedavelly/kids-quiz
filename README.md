@@ -18,3 +18,6 @@ Questions with Options:
 
 #Contributing
 We welcome contributions to improve the Kids Quiz App! If you have any suggestions, feature requests, or bug reports, please feel free to submit them through GitHub issues or create a pull request.
+
+#Wireframes
+<img width="1027" alt="homepage" src="https://github.com/dyedavelly/kids-quiz/assets/10120105/bf629e01-07ec-4b06-a8d7-4aaf4049e564">
