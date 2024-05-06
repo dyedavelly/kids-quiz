@@ -21,3 +21,4 @@ We welcome contributions to improve the Kids Quiz App! If you have any suggestio
 
 #Wireframes
 <img width="1027" alt="homepage" src="https://github.com/dyedavelly/kids-quiz/assets/10120105/bf629e01-07ec-4b06-a8d7-4aaf4049e564">
+<img width="1024" alt="quizpage" src="https://github.com/dyedavelly/kids-quiz/assets/10120105/0675a869-b15e-4ae2-958f-37c797856cb7">
