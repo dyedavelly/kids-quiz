@@ -10,27 +10,42 @@
     width: 800px;
     height: 500px;
     max-width: 80%;
-    padding: 20px;
+    padding: 20px; 
 }
+
 .quizModal.active {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.volumeButtons {
-    margin-right: 15px;    
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
 }
+
 .volumeButtons button {
     background-color: lavenderblush;
     color: purple;
 }
 
 #questionText {
+    text-align: center;
+    padding: 10px;
+    width: 700px;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
     font-size: 40px;
     font-family: "fantasy";
     color: darkgreen;
     font-weight: bold;
 }
-
+.optionButtons {
+    display: flex;
+    flex-direction: column;
+}
 .optionButtons button {
     font-size: 20px;
     font-weight: bold;
@@ -40,27 +55,29 @@
     border-radius: 10px;
     background-color: darkgreen;
     color: lavenderblush;
+    margin: 5px;
 }
-.optionButtons {
-    display: flex;
-}
-.buttonLine button{
-   margin: 15px;
-}
-.buttonLine button:hover {
+
+
+.optionButtons button:hover {
     background-color: yellowgreen;
 }
+
 #nextQuestion, #submitQuiz {
     font-size: 25px;
     font-weight: bold;
-    width: 40%;
     height: 50px;
     border-radius: 10px;
     background-color: lavenderblush;
     color: darkgreen;
-    border: 1px solid darkgreen;
-    
+    border: 1px solid darkgreen;  
 }
+
 .nextAndSubmit {
-   margin: auto;
+  margin: 20px;
+}
+
+.volumeButtons {
+    display: flex;
+    justify-content: flex-end;
 }
