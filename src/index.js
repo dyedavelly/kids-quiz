@@ -1,77 +1,95 @@
 import * as aboutModal from './scripts/modal.js';
 import questions from './assests/questions.js';
 
-document.addEventListener('DOMContentLoaded', ()=> {
+document.addEventListener('DOMContentLoaded', () => {
     const openModalButton = document.getElementById('aboutButton');
     const closeModalButton = document.getElementById('closeButton');
     const overlay = document.getElementById('overlay');
-    
+    const startQuizButton = document.getElementById('startButton');
+    const nextButton = document.getElementById('nextQuestion');
+    const submitButton = document.getElementById('submitQuiz');
+    const volumeUpButton = document.getElementById('volumeUp');
+    const volumeDownButton = document.getElementById('volumeDown');
+    const questionText = document.getElementById('questionText');
+    const answerButtons = document.querySelectorAll('.optionButtons button');
+    let totalQuestions = Object.keys(questions).length;
+    let totalQuestionsInQuiz = 5;
+    let score = 0;
+    let previousQuestionNumbers = [];
+    let randomQuestionNumber;
+
+    function initializeQuiz() {
+        previousQuestionNumbers = [];
+        score = 0;
+        resetQuiz();
+        randomQuestionNumber = getRandomQuestionNumber();
+        displayQuestion(randomQuestionNumber);
+        answerButtons.forEach(button => {
+            button.addEventListener('click', selectAnswer);
+        });
+    }
+
+    function getRandomQuestionNumber() {
+        let randomNumber;   
+        while (previousQuestionNumbers.includes(randomNumber)){
+            randomNumber = Math.floor(Math.random() * totalQuestions);
+        }
+        previousQuestionNumbers.push(randomNumber);
+        return randomNumber;
+    }
+
+    function displayQuestion(questionNumber) {
+        const question = questions[questionNumber];
+        questionText.innerText = question.text;
+        answerButtons.forEach((button, index) => {
+            button.innerText = question['option' + (index + 1)];
+            button.style.display = 'block';
+        });
+    }
+
+    function resetQuiz() {
+        questionText.innerText = '';
+        answerButtons.forEach(button => {
+            button.innerText = '';
+            button.style.display = 'none';
+        });
+    }
+
+    function selectAnswer(e) {
+        const selectedAnswer = e.target;
+        disableButtons(true);
+        if (selectedAnswer.id === questions[randomQuestionNumber].correctAnswer) {
+            score += 1;
+            selectedAnswer.classList.add('correct');
+        } else {
+            selectedAnswer.classList.add('incorrect');
+        }
+        if (previousQuestionNumbers.length !== totalQuestionsInQuiz) {
+            nextButton.style.display = 'block';
+        }
+    }
+
+    function disableButtons(boolean) {
+        answerButtons.forEach(button => {
+            button.disabled = boolean;
+        });
+    }
+
     openModalButton.addEventListener('click', () => {
         const modal = document.getElementById('aboutModal');
         aboutModal.openModal(modal);
     });
-    
+
     closeModalButton.addEventListener('click', () => {
         const modal = document.getElementById('aboutModal');
         aboutModal.closeModal(modal);
     });
 
-    const startQuizButton = document.getElementById('startButton');
     startQuizButton.addEventListener('click', () => {
         const modal = document.getElementById('quizModal');
         aboutModal.openModal(modal);
+        initializeQuiz();
     });
-
-    //To get total No.of questions from questions.js
-    let totalQuestions = Object.keys(questions).length; 
-    let totalQuestionsInQuiz = 5;
-    let score = 0;
-    let previousQuestionNumbers = [];
-    let randomQuestionNumber = Math.floor(Math.random() * totalQuestions);
-    previousQuestionNumbers.push(randomQuestionNumber);
-    
-    const questionText = document.getElementById('questionText');
-    const answer1 = document.getElementById('option1');
-    const answer2 = document.getElementById('option2');
-    const answer3 = document.getElementById('option3');
-    const answer4 = document.getElementById('option4');
-    const nextButton = document.getElementById('nextQuestion');
-    const submitButton = document.getElementById('submitQuiz');
-    const volumeUpButton = document.getElementById('volumeUp');
-    const volumeDownButton = document.getElementById('volumeDown');
-    const answerButtons = document.querySelectorAll('.optionButtons button');
-
-    //Displaying the questions and answers
-    questionText.innerText = questions[randomQuestionNumber].text;
-    answer1.innerText = questions[randomQuestionNumber].option1;
-    answer2.innerText = questions[randomQuestionNumber].option2;
-    answer3.innerText = questions[randomQuestionNumber].option3;
-    answer4.innerText = questions[randomQuestionNumber].option4;
-
-    answerButtons.forEach(button => {
-          button.addEventListener('click', selectAnswer);
-    });
-    
-    function selectAnswer(e){
-      const selectedAnswer = e.target;
-      disableButtons(true);
-      if (selectedAnswer.id === questions[randomQuestionNumber].correctAnswer){
-          score += 1;
-          selectedAnswer.classList.add('correct');
-      } else 
-      {
-        selectedAnswer.classList.add('incorrect');
-      }
-      if(previousQuestionNumbers.length !== totalQuestionsInQuiz){
-        nextButton.style.display = 'block';
-      } 
-    }
-
-    function disableButtons(boolean){
-        answerButtons.forEach(button => {
-            button.disabled = boolean;
-        });
-    }
 
     nextButton.addEventListener('click', () => {
         nextButton.style.display = 'none';
@@ -79,20 +97,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
         answerButtons.forEach(button => {
             button.classList.remove('correct', 'incorrect');
         });
-        while(previousQuestionNumbers.includes(randomQuestionNumber)){
-            randomQuestionNumber = Math.floor(Math.random() * totalQuestions); 
+        if (previousQuestionNumbers.length === totalQuestionsInQuiz - 1) {
+            submitButton.style.display = 'block'; // Display submit button for the last question
         }
-        previousQuestionNumbers.push(randomQuestionNumber);
-
         if (previousQuestionNumbers.length === totalQuestionsInQuiz) {
-            nextButton.style.display = 'none';
-            submitButton.style.display = 'block';
+            submitButton.style.display = 'none'; // Hide submit button after last question is answered
         }
-        questionText.innerText = questions[randomQuestionNumber].text;
-        answer1.innerText = questions[randomQuestionNumber].option1;
-        answer2.innerText = questions[randomQuestionNumber].option2;
-        answer3.innerText = questions[randomQuestionNumber].option3;
-        answer4.innerText = questions[randomQuestionNumber].option4;
+        randomQuestionNumber = getRandomQuestionNumber();
+        displayQuestion(randomQuestionNumber);
     });
     
     volumeUpButton.addEventListener('click', () => {
@@ -105,18 +117,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
         volumeUpButton.style.display = 'block';
     });
 
-    function resetQuiz(){
-        questionText.innerText = '';
-        answerButtons.forEach(button => {
-            button.innerText = '';
-            button.style.display = 'none';
-        });
-    }
-
     submitButton.addEventListener('click', () => {
-        previousQuestionNumbers = [];
         resetQuiz();
-        questionText.innerText = `Your score is ${score} out of 5!`;
+        questionText.innerText = `Your score is ${score} out of ${totalQuestionsInQuiz}!`;
         submitButton.style.display = 'none';
     });
 });
