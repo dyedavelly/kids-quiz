@@ -58,6 +58,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
         answer2.innerText = questions[randomQuestionNumber].option2;
         answer3.innerText = questions[randomQuestionNumber].option3;
         answer4.innerText = questions[randomQuestionNumber].option4;
-
+    });
+    const volumeUpButton = document.getElementById('volumeUp');
+    const volumeDownButton = document.getElementById('volumeDown');
+    volumeUpButton.addEventListener('click', () => {
+        volumeDownButton.style.display = 'block';
+        volumeUpButton.style.display = 'none';
+    });
+    volumeDownButton.addEventListener('click', () => {
+        volumeDownButton.style.display = 'none';
+        volumeUpButton.style.display = 'block';
     });
 });
