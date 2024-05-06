@@ -255,5 +255,4 @@ export default {
         option4: 'Jupiter',
         correctAnswer: 'option3'
     }
-
 }
