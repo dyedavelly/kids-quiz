@@ -25,9 +25,9 @@ export default {
     },
     3: {
         text: 'If you freeze water, what do you get?',
-        option1: 'Oil',
-        option2: 'Cold Water',
-        option3: 'H2O',
+        option1: 'Steam',
+        option2: 'Liquid',
+        option3: 'Solid',
         option4: 'Ice',
         correctAnswer: 'option4'
     },
@@ -61,7 +61,7 @@ export default {
         option2: 'Maple Syrup',
         option3: 'Juice',
         option4: 'Milk',
-        correctAnswer: 'option3'
+        correctAnswer: 'option1'
     },
     8: {
         text: 'How many days are in a Leap year?',

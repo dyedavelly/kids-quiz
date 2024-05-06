@@ -59,7 +59,7 @@
 }
 
 
-.optionButtons button:hover {
+.optionButtons button:hover:not([disabled]) {
     background-color: yellowgreen;
 }
 
@@ -81,3 +81,25 @@
     display: flex;
     justify-content: flex-end;
 }
+
+@keyframes buzz {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+button.correct {
+    background-color: yellowgreen;
+}
+
+button.incorrect {
+    background-color: lightcoral;
+    animation: buzz 0.25s ease-in-out;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
