@@ -110,6 +110,93 @@ export default {
         option3: 'Seven',
         option4: 'Eleven',
         correctAnswer: 'option3'
+    },
+    14: {
+        text: 'Which planet is known as the Red Planet?',
+        option1: 'Earth',
+        option2: 'Venus',
+        option3: 'Mars',
+        option4: 'Jupiter',
+        correctAnswer: 'option3'
+    },
+    15: {
+        text: 'What is the capital city of France?',
+        option1: 'London',
+        option2: 'Paris',
+        option3: 'Rome',
+        option4: 'Berlin',
+        correctAnswer: 'option2'
+    },
+    16: {
+        text: 'What is the capital city of the United States?',
+        option1: 'Washington, D.C.',
+        option2: 'New York City',
+        option3: 'Los Angeles',
+        option4: 'Chicago',
+        correctAnswer: 'option1'
+    },
+    17: {
+        text: 'Which animal can fly without wings?',
+        option1: 'Bat',
+        option2: 'Penguin',
+        option3: 'Snake',
+        option4: 'Dragonfly',
+        correctAnswer: 'option4'
+    },
+    18: {
+        text: 'What is the largest planet in our solar system?',
+        option1: 'Earth',
+        option2: 'Mars',
+        option3: 'Jupiter',
+        option4: 'Saturn',
+        correctAnswer: 'option3'
+    },
+    19: {
+        text: 'What is the process by which plants make their own food?',
+        option1: 'Photosynthesis',
+        option2: 'Respiration',
+        option3: 'Transpiration',
+        option4: 'Pollination',
+        correctAnswer: 'option1'
+    },
+    20: {
+        text: 'What is the largest organ in the human body?',
+        option1: 'Brain',
+        option2: 'Heart',
+        option3: 'Skin',
+        option4: 'Liver',
+        correctAnswer: 'option3'
+    },
+    21: {
+        text: 'What is the name of the smallest planet in our solar system?',
+        option1: 'Venus',
+        option2: 'Mars',
+        option3: 'Mercury',
+        option4: 'Neptune',
+        correctAnswer: 'option3'
+    },
+    22: {
+        text: 'What is the hardest natural substance on Earth?',
+        option1: 'Gold',
+        option2: 'Diamond',
+        option3: 'Silver',
+        option4: 'Platinum',
+        correctAnswer: 'option2'
+    },
+    23: {
+        text: 'Which animal is known as the "king of the jungle"?',
+        option1: 'Elephant',
+        option2: 'Giraffe',
+        option3: 'Lion',
+        option4: 'Tiger',
+        correctAnswer: 'option3'
+    },
+    24: {
+        text: 'What is the tallest mountain in the world?',
+        option1: 'Mount Everest',
+        option2: 'K2',
+        option3: 'Kangchenjunga',
+        option4: 'Lhotse',
+        correctAnswer: 'option1'
     }
-
 }
