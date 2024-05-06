@@ -198,5 +198,62 @@ export default {
         option3: 'Kangchenjunga',
         option4: 'Lhotse',
         correctAnswer: 'option1'
+    },
+    25: {
+        text: 'Which planet is known as the "Blue Planet"?',
+        option1: 'Earth',
+        option2: 'Neptune',
+        option3: 'Uranus',
+        option4: 'Saturn',
+        correctAnswer: 'option1'
+    },
+    26: {
+        text: 'What is the largest ocean on Earth?',
+        option1: 'Atlantic Ocean',
+        option2: 'Indian Ocean',
+        option3: 'Arctic Ocean',
+        option4: 'Pacific Ocean',
+        correctAnswer: 'option4'
+    },
+    28: {
+        text: 'Which gas do plants absorb during photosynthesis?',
+        option1: 'Oxygen',
+        option2: 'Carbon Dioxide',
+        option3: 'Nitrogen',
+        option4: 'Hydrogen',
+        correctAnswer: 'option2'
+    },
+    29: {
+        text: 'How many bones are there in the adult human body?',
+        option1: '206',
+        option2: '215',
+        option3: '220',
+        option4: '198',
+        correctAnswer: 'option1'
+    },
+    30: {
+        text: 'Which animal is known as the "Ship of the Desert"?',
+        option1: 'Camel',
+        option2: 'Horse',
+        option3: 'Elephant',
+        option4: 'Giraffe',
+        correctAnswer: 'option1'
+    },
+    31: {
+        text: 'Which bird is known for its ability to mimic human speech?',
+        option1: 'Parrot',
+        option2: 'Eagle',
+        option3: 'Ostrich',
+        option4: 'Penguin',
+        correctAnswer: 'option1'
+    },
+    32: {
+        text: 'Which planet is known as the "Red Planet"?',
+        option1: 'Earth',
+        option2: 'Venus',
+        option3: 'Mars',
+        option4: 'Jupiter',
+        correctAnswer: 'option3'
     }
+
 }
