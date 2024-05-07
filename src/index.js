@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const openModalButton = document.getElementById('aboutButton');
     const closeModalButton = document.getElementById('closeButton');
     const startQuizButton = document.getElementById('startButton');
+    const backgroundMusic = document.getElementById('backgroundMusic');
     const overlay = document.getElementById('overlay');
 
     const questionText = document.getElementById('questionText');
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         const modal = document.getElementById('quizModal');
         aboutModal.openModal(modal);
         displayQuestions();
+        backgroundMusic.play();
     });
  
     answerButtons.forEach(button => {
@@ -94,11 +96,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
     volumeUpButton.addEventListener('click', () => {
         volumeDownButton.style.display = 'block';
         volumeUpButton.style.display = 'none';
+        backgroundMusic.pause();
     });
 
     volumeDownButton.addEventListener('click', () => {
         volumeDownButton.style.display = 'none';
         volumeUpButton.style.display = 'block';
+        backgroundMusic.play();
     });
 
     function resetQuiz(){
