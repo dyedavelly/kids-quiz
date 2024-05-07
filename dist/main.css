@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/home_page.css ***!
   \********************************************************************************************************/
 body {
-    background-image: url('/src/assests/background_image.png');
+    background-image: url('../src/assests/background_image.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -220,7 +220,18 @@ button.incorrect {
 button:disabled {
     cursor: not-allowed;
 }
-
+#playAgain {
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+    color: lavenderblush;
+    background-color: purple;
+    border: 1px solid darkgreen;  
+    border-radius: 10px;
+}
+#playAgain:hover {
+    background-color: rgb(215, 20, 215);
+}
 
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

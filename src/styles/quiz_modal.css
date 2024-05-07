@@ -102,4 +102,15 @@ button.incorrect {
 button:disabled {
     cursor: not-allowed;
 }
-
+#playAgain {
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+    color: lavenderblush;
+    background-color: purple;
+    border: 1px solid darkgreen;  
+    border-radius: 10px;
+}
+#playAgain:hover {
+    background-color: rgb(215, 20, 215);
+}

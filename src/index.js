@@ -1,12 +1,14 @@
-import * as aboutModal from './scripts/modal.js';
+import * as Modal from './scripts/modal.js';
 import questions from './assests/questions.js';
 
 document.addEventListener('DOMContentLoaded', ()=> {
-    const openModalButton = document.getElementById('aboutButton');
-    const closeModalButton = document.getElementById('closeButton');
+    const openAboutModalButton = document.getElementById('aboutButton');
+    const closeAboutModalButton = document.getElementById('closeButton');
     const startQuizButton = document.getElementById('startButton');
     const backgroundMusic = document.getElementById('backgroundMusic');
-    const overlay = document.getElementById('overlay');
+    const playAgainButton = document.getElementById('playAgain');
+    const quizModal = document.getElementById('quizModal');
+    const aboutModal = document.getElementById('aboutModal');
 
     const questionText = document.getElementById('questionText');
     const answer1 = document.getElementById('option1');
@@ -21,25 +23,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     let totalQuestions = Object.keys(questions).length; 
     let totalQuestionsInQuiz = 5;
-    let score = 0;
-    let previousQuestionNumbers = [];
-    let randomQuestionNumber = Math.floor(Math.random() * totalQuestions);
+    let score;
+    let previousQuestionNumbers;
+    let randomQuestionNumber;
 
-    
-    openModalButton.addEventListener('click', () => {
-        const modal = document.getElementById('aboutModal');
-        aboutModal.openModal(modal);
+    openAboutModalButton.addEventListener('click', () => {
+        Modal.openModal(aboutModal);
     });
     
-    closeModalButton.addEventListener('click', () => {
-        const modal = document.getElementById('aboutModal');
-        aboutModal.closeModal(modal);
+    closeAboutModalButton.addEventListener('click', () => {
+        Modal.closeModal(aboutModal);
     });
 
     startQuizButton.addEventListener('click', () => {
-        const modal = document.getElementById('quizModal');
-        aboutModal.openModal(modal);
-        displayQuestions();
+        startQuiz();
         backgroundMusic.play();
     });
  
@@ -48,6 +45,10 @@ document.addEventListener('DOMContentLoaded', ()=> {
     });
 
     function displayQuestions(){
+        randomQuestionNumber = Math.floor(Math.random() * totalQuestions);
+        while(previousQuestionNumbers.includes(randomQuestionNumber)){
+            randomQuestionNumber = Math.floor(Math.random() * totalQuestions); 
+        }
         previousQuestionNumbers.push(randomQuestionNumber);
         questionText.innerText = questions[randomQuestionNumber].text;
         answer1.innerText = questions[randomQuestionNumber].option1;
@@ -87,9 +88,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
         answerButtons.forEach(button => {
             button.classList.remove('correct', 'incorrect');
         });
-        while(previousQuestionNumbers.includes(randomQuestionNumber)){
-            randomQuestionNumber = Math.floor(Math.random() * totalQuestions); 
-        }
         displayQuestions();
     });
     
@@ -105,7 +103,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         backgroundMusic.play();
     });
 
-    function resetQuiz(){
+    function resetScreen(){
         questionText.innerText = '';
         answerButtons.forEach(button => {
             button.innerText = '';
@@ -113,10 +111,28 @@ document.addEventListener('DOMContentLoaded', ()=> {
         });
     }
 
-    submitButton.addEventListener('click', () => {
+    function startQuiz() {
         previousQuestionNumbers = [];
-        resetQuiz();
+        score = 0;
+        Modal.openModal(quizModal);
+        answerButtons.forEach(button => {
+            button.style.display = 'block';
+            button.classList.remove('correct', 'incorrect');
+        });
+        displayQuestions();
+        disableButtons(false);
+        playAgainButton.style.display = 'none';
+    }
+
+    submitButton.addEventListener('click', () => {
+        resetScreen();
         questionText.innerText = `Your score is ${score} out of 5!`;
         submitButton.style.display = 'none';
+        playAgainButton.style.display = 'block';
     });
+
+    playAgainButton.addEventListener('click', () => {
+       startQuiz();
+    });
+
 });

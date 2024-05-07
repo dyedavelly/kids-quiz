@@ -1,5 +1,5 @@
 body {
-    background-image: url('/src/assests/background_image.png');
+    background-image: url('../src/assests/background_image.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
