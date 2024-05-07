@@ -66,6 +66,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
       } else 
       {
         selectedAnswer.classList.add('incorrect');
+        let correctAnswerId = questions[randomQuestionNumber].correctAnswer;
+        let correctAnswerButton = document.getElementById(correctAnswerId);
+        correctAnswerButton.classList.add('correct');
       }
       if(previousQuestionNumbers.length !== totalQuestionsInQuiz){
         nextButton.style.display = 'block';
