@@ -1,6 +1,8 @@
 # Kids Quiz App
 Welcome to the Kids Quiz App! This interactive quiz app is designed to make learning fun for children of all ages. With colorful screens, engaging questions, and lively music, it provides an enjoyable educational experience.
 
+# Project Link
+Here is the link to the live project: https://dyedavelly.github.io/kids-quiz/
 # Features
 Start Button: 
 -Click on the "Start" button to begin the quiz.
