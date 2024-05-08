@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const playAgainButton = document.getElementById('playAgain');
     const quizModal = document.getElementById('quizModal');
     const aboutModal = document.getElementById('aboutModal');
+    const scoreImage = document.getElementById('scoreImg');
 
     const questionText = document.getElementById('questionText');
     const answer1 = document.getElementById('option1');
@@ -125,6 +126,19 @@ document.addEventListener('DOMContentLoaded', ()=> {
         displayQuestions();
         disableButtons(false);
         playAgainButton.style.display = 'none';
+        scoreImage.style.display = 'none';
+    }
+
+    function displayScoreImage(){
+        if(score === 0 || score === 1){
+            scoreImage.src = "./src/assests/low_score.png";
+        } else if(score === 2 || score === 3) {
+            scoreImage.src = "./src/assests/mid_score.png";
+        } else if(score === 4 || score === 5){
+            scoreImage.src = "./src/assests/full_score.png";
+        }
+        scoreImage.style.display = 'block';
+        scoreImage.classList.add('movingImage');
     }
 
     submitButton.addEventListener('click', () => {
@@ -132,6 +146,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         questionText.innerText = `Your score is ${score} out of 5!`;
         submitButton.style.display = 'none';
         playAgainButton.style.display = 'block';
+        displayScoreImage();
     });
 
     playAgainButton.addEventListener('click', () => {

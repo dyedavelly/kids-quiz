@@ -114,6 +114,27 @@ button:disabled {
 #playAgain:hover {
     background-color: rgb(215, 20, 215);
 }
+
+#scoreImg {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+@keyframes moveImage {
+    0% { left: 0; } /* Starting position */
+    100% { left: calc(100% - 100px); } /* Ending position */
+}
+
+#scoreImg {
+    width: 200px;
+    height: 200px;  
+}
+
+.movingImage {
+    animation: moveImage 3s linear infinite;
+}
+
 @media only screen and (max-width: 768px) {
     .quizModal {
         top: 50%;
