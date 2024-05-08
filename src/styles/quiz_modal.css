@@ -115,6 +115,9 @@ button:disabled {
     background-color: rgb(215, 20, 215);
 }
 @media only screen and (max-width: 768px) {
+    .quizModal {
+        top: 50%;
+    }
     #questionText {
         font-size: 20px; /* Adjust font size for mobile devices */
     }
