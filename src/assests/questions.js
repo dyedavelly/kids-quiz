@@ -215,6 +215,14 @@ export default {
         option4: 'Pacific Ocean',
         correctAnswer: 'option4'
     },
+    27: {
+        text: 'What is the largest mammal in the world?',
+        option1: 'Elephant',
+        option2: 'Whale',
+        option3: 'Giraffe',
+        option4: 'Hippopotamus',
+        correctAnswer: 'option2'
+    },
     28: {
         text: 'Which gas do plants absorb during photosynthesis?',
         option1: 'Oxygen',
@@ -253,6 +261,22 @@ export default {
         option2: 'Venus',
         option3: 'Mars',
         option4: 'Jupiter',
+        correctAnswer: 'option3'
+    },
+    33: {
+        text: 'Which continent is known as the Land of Kangaroos?',
+        option1: 'Europe',
+        option2: 'Asia',
+        option3: 'North America',
+        option4: 'Australia',
+        correctAnswer: 'option4'
+    },
+    34: {
+        text: 'Which planet is known for its beautiful rings?',
+        option1: 'Mars',
+        option2: 'Venus',
+        option3: 'Saturn',
+        option4: 'Neptune',
         correctAnswer: 'option3'
     }
 }

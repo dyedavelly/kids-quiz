@@ -22,5 +22,5 @@ Questions with Options:
 We welcome contributions to improve the Kids Quiz App! If you have any suggestions, feature requests, or bug reports, please feel free to submit them through GitHub issues or create a pull request.
 
 # Wireframes
-<img width="1027" alt="homepage" src="![homepage](https://github.com/dyedavelly/kids-quiz/assets/10120105/81f61a69-291f-468d-a848-df07d45fc6b1)">
-<img width="1024" alt="quizpage" src="![quizpage](https://github.com/dyedavelly/kids-quiz/assets/10120105/a03ffeff-5c34-4952-81d6-f3dec2ab0e65)">
+![homepage](https://github.com/dyedavelly/kids-quiz/assets/10120105/81f61a69-291f-468d-a848-df07d45fc6b1)
+![quizpage](https://github.com/dyedavelly/kids-quiz/assets/10120105/a03ffeff-5c34-4952-81d6-f3dec2ab0e65)

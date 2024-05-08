@@ -1,3 +1,6 @@
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/home_page.css ***!
+  \********************************************************************************************************/
 body {
     background-image: url('../src/assests/background_image.png');
     background-size: cover;
@@ -73,6 +76,9 @@ body {
     }
 }
 
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/about_modal.css ***!
+  \**********************************************************************************************************/
 .aboutModal {
     position: fixed;
     top: 50%;
@@ -122,6 +128,9 @@ body {
 
 
 
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/quiz_modal.css ***!
+  \*********************************************************************************************************/
 .quizModal {
     position: fixed;
     top: 48%;
@@ -273,6 +282,37 @@ button:disabled {
         font-size: 18px;
     }
 }
-html,body,div,span,h1,h2,h3,h4,a,p,ol,ul,li,form,label,article,aside,figure,figcaption,footer,header,nav{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-decoration:none;box-sizing:content-box}ol,ul{list-style:none}img{width:100%}input[type=submit],button{border:none;background-color:#fff;font-size:100%;cursor:pointer}input{outline:none;border:none}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+html, body, div, span, h1, h2, h3, h4, a, p, ol, ul, li, form, label, article,
+aside, figure, figcaption, footer, header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: content-box;
+}
 
-/*# sourceMappingURL=main.css.map*/
+ol, ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+input[type=submit], button {
+  border: none;
+  background-color: white;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+}
