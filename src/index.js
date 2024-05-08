@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const playAgainButton = document.getElementById('playAgain');
     const quizModal = document.getElementById('quizModal');
     const aboutModal = document.getElementById('aboutModal');
+    const currentScoreLabel = document.getElementById('currentScore');
     const scoreImage = document.getElementById('scoreImg');
 
     const questionText = document.getElementById('questionText');
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         answer2.innerText = questions[randomQuestionNumber].option2;
         answer3.innerText = questions[randomQuestionNumber].option3;
         answer4.innerText = questions[randomQuestionNumber].option4;
+        currentScoreLabel.textContent = "Current Score: " + score;
     }
 
     function selectAnswer(e){
@@ -64,6 +66,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
       if (selectedAnswer.id === questions[randomQuestionNumber].correctAnswer){
           score += 1;
           selectedAnswer.classList.add('correct');
+          currentScoreLabel.textContent = "Current Score: " + score;
       } else 
       {
         selectedAnswer.classList.add('incorrect');
@@ -113,6 +116,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
             button.innerText = '';
             button.style.display = 'none';
         });
+        currentScoreLabel.textContent = "";
+
     }
 
     function startQuiz() {

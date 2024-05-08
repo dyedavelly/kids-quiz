@@ -149,7 +149,11 @@ body {
 .quizModal.active {
     transform: translate(-50%, -50%) scale(1);
 }
-
+#currentScore {
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+}
 .question {
     display: flex;
     flex-direction: column;
