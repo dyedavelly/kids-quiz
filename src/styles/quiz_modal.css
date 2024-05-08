@@ -114,3 +114,14 @@ button:disabled {
 #playAgain:hover {
     background-color: rgb(215, 20, 215);
 }
+@media only screen and (max-width: 768px) {
+    #questionText {
+        font-size: 20px; /* Adjust font size for mobile devices */
+    }
+    .optionButtons button{
+        font-size: 18px;
+    }
+    #nextQuestion, #submitQuiz, #playAgain {
+        font-size: 18px;
+    }
+}

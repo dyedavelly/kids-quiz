@@ -64,3 +64,11 @@ body {
     background-color: yellowgreen;
 }
 
+@media only screen and (max-width: 768px) {
+    #mainTitle {
+        font-size: 18px; /* Adjust font size for mobile devices */
+    }
+    #mainMenu button{
+        font-size: 18px;
+    }
+}

@@ -67,6 +67,14 @@ body {
     background-color: yellowgreen;
 }
 
+@media only screen and (max-width: 768px) {
+    #mainTitle {
+        font-size: 18px; /* Adjust font size for mobile devices */
+    }
+    #mainMenu button{
+        font-size: 18px;
+    }
+}
 
 /*!**********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/about_modal.css ***!
@@ -109,6 +117,13 @@ body {
 .aboutModal .modalBody {
     padding: 10px 15px;
     line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutModal {
+        top: 55%;
+        height: 400px;
+    }
 }
 
 
@@ -232,7 +247,17 @@ button:disabled {
 #playAgain:hover {
     background-color: rgb(215, 20, 215);
 }
-
+@media only screen and (max-width: 768px) {
+    #questionText {
+        font-size: 20px; /* Adjust font size for mobile devices */
+    }
+    .optionButtons button{
+        font-size: 18px;
+    }
+    #nextQuestion, #submitQuiz, #playAgain {
+        font-size: 18px;
+    }
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
