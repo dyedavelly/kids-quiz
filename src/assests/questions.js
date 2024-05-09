@@ -256,12 +256,12 @@ export default {
         correctAnswer: 'option1'
     },
     32: {
-        text: 'Which planet is known as the "Red Planet"?',
-        option1: 'Earth',
-        option2: 'Venus',
-        option3: 'Mars',
-        option4: 'Jupiter',
-        correctAnswer: 'option3'
+        text: 'What is the symbol for water?',
+        option1: 'W',
+        option2: 'H2O',
+        option3: 'O2',
+        option4: 'H',
+        correctAnswer: 'option4'
     },
     33: {
         text: 'Which continent is known as the Land of Kangaroos?',
